@@ -1,0 +1,10 @@
+<div class="d-flex bd-highlight mb-3 align-items-baseline">
+    <h5 [ngClass]="{'strike': !todo.active}" class="d-inline-flex flex-grow-1 bd-highlight mx-4">{{todo.title}}</h5>
+    <p class="d-inline-flex flex-grow-1">{{todo.desc}}</p>
+    <div class="d-inline-flex align-item-center mx-3">
+        <input type="checkbox" class="btn btn-outline-danger btn-sm btn-check" id="btncheck{{i}}" autocomplete="off"
+            (click)="onCheck(todo)">
+        <label class="btn btn-outline-primary btn-sm" for="btncheck{{i}}">Check</label>
+    </div>
+    <button class="d-inline-flex flex-grow-2 btn btn-outline-danger btn-sm " (click)="onClick(todo)">Delete</button>
+</div>
